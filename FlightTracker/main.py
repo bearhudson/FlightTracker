@@ -12,8 +12,8 @@ headers = {
 }
 
 search_dates = []
-start_date = '2022/03/03'
-weeks = 10
+starting_at = '2022/03/03'
+weeks = 5
 
 
 def draw_table(params):
@@ -44,7 +44,7 @@ def draw_table(params):
 
 
 for index in range(weeks):
-    start_date = datetime.strptime(start_date, '%Y/%m/%d')
+    start_date = datetime.strptime(starting_at, '%Y/%m/%d')
     search_date_start = (start_date + timedelta(weeks=index))
     search_date_start_string = search_date_start.strftime('%d/%m/%Y')
     search_date_end = (search_date_start + timedelta(days=2)).strftime('%d/%m/%Y')
