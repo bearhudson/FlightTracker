@@ -3,6 +3,7 @@ from src.environs import *
 from dateutil import parser
 from rich.table import Table
 from rich.console import Console
+from rich.progress import track
 from datetime import datetime
 from datetime import timedelta
 
@@ -43,6 +44,7 @@ def draw_table(params):
     console.print(table)
 
 
+# for index in track(range(weeks), description="Thinking..."):
 for index in range(weeks):
     start_date = datetime.strptime(starting_at, '%Y/%m/%d')
     search_date_start = (start_date + timedelta(weeks=index))
@@ -51,7 +53,7 @@ for index in range(weeks):
     return_date_start = (start_date + timedelta(weeks=index + 2))
     return_date_start_string = return_date_start.strftime('%d/%m/%Y')
     return_date_end = (return_date_start + timedelta(days=2)).strftime('%d/%m/%Y')
-    dest = [('BOS', 'YYC'), ('BOS', 'LHR'), ('BOS', 'NRT')]
+    dest = [('BOS', 'YYC'), ('BOS', 'LHR'), ('BOS', 'NRT'), ('BOS', 'SEA')]
     for d in dest:
         flight_params = {
             "fly_from": f"{d[0]}",
