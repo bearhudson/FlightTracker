@@ -16,13 +16,13 @@ headers = {
     "apikey": apikey,
 }
 
-airport_list = ['YYC', 'STN', 'SEA', 'NRT', 'VCE',  'SIN', 'KUL', 'BKK', 'MNL']
 home_airport = 'BOS'
+airport_list = ['YYC', 'STN', 'SEA', 'NRT', 'VCE',  'SIN', 'KUL', 'BKK', 'MNL']
 search_dates = []
 start_date = '2022/03/03'
 weeks = 10
-max_stopovers = 1
-max_limit_returns = 3
+max_stopovers = 2
+max_limit_returns = 4
 weeks_traveling = 2
 
 
