@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "flighttracker"
+name = "FlightTracker"
 version = "0.1.0"
 description = ""
 authors = ["Brian Hudson <reallybrianhudson@gmail.com>"]
